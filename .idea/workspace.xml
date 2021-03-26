@@ -215,6 +215,7 @@
     <option name="width" value="1350" />
     <option name="height" value="935" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -286,7 +287,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616726737793" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616729425202" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -548,7 +549,7 @@
       <workItem from="1593924007798" duration="856000" />
       <workItem from="1594085100450" duration="1820000" />
       <workItem from="1612434978289" duration="816000" />
-      <workItem from="1616726707602" duration="317000" />
+      <workItem from="1616726707602" duration="912000" />
     </task>
     <servers />
   </component>
@@ -585,7 +586,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388352000" />
+    <option name="totallyTimeSpent" value="388947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
