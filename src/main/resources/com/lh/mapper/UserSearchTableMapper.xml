@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.UserSearchTableMapper">
+    <select id="selectSearchTable" resultType="String">
+        select search_content from user_search_table
+        where search_content != ''
+        order by search_record_id desc
+        limit #{num}
+    </select>
+
+    <insert id="insertSearchTable">
+        insert into user_search_table(user_id, search_content)
+        value (#{userId}, #{words})
+    </insert>
+
+</mapper>

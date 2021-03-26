@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.UserBrowseTableMapper">
+    <select id="selectBrowse" resultType="com.lh.pojo.MedicinalDietTable">
+        select distinct t2.*
+        from user_browse_table t1, medicinal_diet_table t2
+        where t1.goods_id = t2.medicinal_diet_id
+        and t1.goods_category = 1
+        and t1.user_id = #{userId}
+        order by t1.browse_record_id desc
+    </select>
+    <insert id="insertBrowse">
+        insert into user_browse_table(user_id, goods_id, goods_category)
+        values (#{userId}, #{medId}, 1)
+    </insert>
+</mapper>

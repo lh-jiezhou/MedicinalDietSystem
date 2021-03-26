@@ -1,0 +1,4 @@
+/*扩展一个白色背景样式*/
+.layui-bg-white{
+    background-color: #FFF !important;
+}

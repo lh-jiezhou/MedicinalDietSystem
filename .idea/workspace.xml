@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MedicinalDietSystem:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa3d7933-278f-44a6-8198-c7fcc44a151d" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssm" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssm" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssm" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="medicinal_diet: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssm" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="medicinal_diet: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="disease_conn_table: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/MedicinalDietTableController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1267">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#showMedicinalDietByApplication#0;class#MedicinalDietTableController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-config" />
+        <option value="FxmlFile" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>20</find>
+      <find>0</find>
+      <find>.c1</find>
+      <find>面包</find>
+      <find>首页</find>
+      <find>Sys</find>
+      <find>icon</find>
+      <find>四月</find>
+      <find>searchMed</find>
+      <find>homeMed</find>
+      <find>varStatus</find>
+      <find>line-height: 24px;</find>
+      <find>diseaseName</find>
+      <find>applicationName</find>
+      <find>${</find>
+      <find>applicationId</find>
+      <find>application</find>
+      <find>http</find>
+      <find>editMedicinalDiet</find>
+      <find>image</find>
+      <find>selectRecommendMedId</find>
+      <find>/static/images/</find>
+      <find>editMedicinalDietInfo</find>
+      <find>editMedicinal</find>
+      <find>editMedDietInfo</find>
+      <find>热门</find>
+      <find>查看制作流程</find>
+      <find>add</find>
+      <find>img</find>
+      <find>评论</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>MedicinalDietSystem</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/pojo/DiseaseCateTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/pojo/DiseaseConnTable.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/ApplicationCateTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/MedicinalDietTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/impl/MedicinalDietTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/mapper/MedicinalDietTableMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/DiseaseCateTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/impl/DiseaseCateTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/mapper/DiseaseCateTableMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/DiseaseCateTableMapple.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/u_middle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_personal.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_material.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_allmedicanal.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/templet.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_knowledge.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/pojo/EfficacyCateTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/EfficacyCateTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/impl/EfficacyCateTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/mapper/EfficacyCateTableMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/EfficacyCateTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/controller/MedicinalDietTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/MedicinalDietTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/UserTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/dto/UserWithLoginDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_information.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_search.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/m_header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/am_login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/am_medicinal_diet_add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/am_medicinal_diet_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/controller/RecommendTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/RecommendTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_recommend.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_browse.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/u_collection.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_application.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_efficacy.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/controller/UserTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/a_header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/controller/AdminMedTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/am_index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/service/AdminMedTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/am_medicinal_diet.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lh/controller/CollectionTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lh/mapper/CollectionTableMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main/m_detail.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="MedicinalDietSystem Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="405" />
+    <option name="y" value="66" />
+    <option name="width" value="1350" />
+    <option name="height" value="935" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MedicinalDietSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MedicinalDietSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616726737793" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\static\plugins\videoJs" />
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\jsp\user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\jsp\admin" />
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\static\images\medicinaldiet" />
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\static\images\material" />
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\static\images\common" />
+      <recent name="D:\IdeaProjects\MedicinalDietSystem\src\main\webapp\static\plugins\back\img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.ssm">
+    <configuration name="MedicinalTest.m1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MedicinalDietSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lh" />
+      <option name="MAIN_CLASS_NAME" value="com.lh.MedicinalTest" />
+      <option name="METHOD_NAME" value="m1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicinalTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MedicinalDietSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lh" />
+      <option name="MAIN_CLASS_NAME" value="com.lh.MedicinalTest" />
+      <option name="METHOD_NAME" value="t1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicinalTest.t2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MedicinalDietSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lh" />
+      <option name="MAIN_CLASS_NAME" value="com.lh.MedicinalTest" />
+      <option name="METHOD_NAME" value="t2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicinalTest.t3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MedicinalDietSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lh" />
+      <option name="MAIN_CLASS_NAME" value="com.lh.MedicinalTest" />
+      <option name="METHOD_NAME" value="t3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicinalTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MedicinalDietSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lh" />
+      <option name="MAIN_CLASS_NAME" value="com.lh.MedicinalTest" />
+      <option name="METHOD_NAME" value="t4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ssm" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.371" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="MedicinalDietSystem:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_MedicinalDietSystem" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56428" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MedicinalDietSystem:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MedicinalTest.t3" />
+        <item itemvalue="JUnit.MedicinalTest.t4" />
+        <item itemvalue="JUnit.MedicinalTest.t2" />
+        <item itemvalue="JUnit.MedicinalTest.t1" />
+        <item itemvalue="JUnit.MedicinalTest.m1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa3d7933-278f-44a6-8198-c7fcc44a151d" name="Default Changelist" comment="" />
+      <created>1554104787424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554104787424</updated>
+      <workItem from="1554104793448" duration="23351000" />
+      <workItem from="1554190923586" duration="6470000" />
+      <workItem from="1554197710569" duration="2115000" />
+      <workItem from="1554382013673" duration="77000" />
+      <workItem from="1554689270747" duration="3479000" />
+      <workItem from="1554692861673" duration="8179000" />
+      <workItem from="1554723839289" duration="5308000" />
+      <workItem from="1554732369105" duration="666000" />
+      <workItem from="1555298640463" duration="13475000" />
+      <workItem from="1555320807020" duration="49000" />
+      <workItem from="1555325232390" duration="3198000" />
+      <workItem from="1555329354275" duration="42000" />
+      <workItem from="1555329437803" duration="7288000" />
+      <workItem from="1555382504791" duration="20549000" />
+      <workItem from="1555428712992" duration="352000" />
+      <workItem from="1555467994634" duration="9241000" />
+      <workItem from="1555487596652" duration="17588000" />
+      <workItem from="1555553364217" duration="22074000" />
+      <workItem from="1555636396547" duration="22695000" />
+      <workItem from="1555724439782" duration="23891000" />
+      <workItem from="1555852634432" duration="3494000" />
+      <workItem from="1555937792660" duration="6727000" />
+      <workItem from="1556004047944" duration="606000" />
+      <workItem from="1556090101072" duration="14646000" />
+      <workItem from="1556157121265" duration="25914000" />
+      <workItem from="1556284632743" duration="155000" />
+      <workItem from="1556284839907" duration="5958000" />
+      <workItem from="1556329986315" duration="3243000" />
+      <workItem from="1556333410498" duration="2869000" />
+      <workItem from="1556421748193" duration="29165000" />
+      <workItem from="1556508136408" duration="19365000" />
+      <workItem from="1556528453739" duration="1037000" />
+      <workItem from="1556529612579" duration="1990000" />
+      <workItem from="1556531899244" duration="816000" />
+      <workItem from="1556541042759" duration="5088000" />
+      <workItem from="1556546705805" duration="525000" />
+      <workItem from="1556674001488" duration="8273000" />
+      <workItem from="1556848158999" duration="5923000" />
+      <workItem from="1556854430389" duration="1875000" />
+      <workItem from="1557018237578" duration="849000" />
+      <workItem from="1557128893243" duration="6899000" />
+      <workItem from="1557215570694" duration="4535000" />
+      <workItem from="1557237003674" duration="2584000" />
+      <workItem from="1557279156243" duration="12374000" />
+      <workItem from="1557311029391" duration="2795000" />
+      <workItem from="1557470831613" duration="7109000" />
+      <workItem from="1557922466765" duration="9750000" />
+      <workItem from="1558659371690" duration="1242000" />
+      <workItem from="1558831609364" duration="8650000" />
+      <workItem from="1593924007798" duration="856000" />
+      <workItem from="1594085100450" duration="1820000" />
+      <workItem from="1612434978289" duration="816000" />
+      <workItem from="1616726707602" duration="317000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MedicinalTest_t4 - 2019.04.26 at 22h 40m 26s.xml">
+      <configuration name="MedicinalTest.t4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 41m 35s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 42m 25s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 44m 53s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 45m 53s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 57m 05s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.26 at 22h 57m 32s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.28 at 15h 03m 47s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.28 at 15h 06m 19s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MedicinalTest_t3 - 2019.04.28 at 15h 34m 16s.xml">
+      <configuration name="MedicinalTest.t3" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="388352000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24329759" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26449788" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5672609" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49597856" weight="0.47487003" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402147" side_tool="true" weight="0.47524753" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.33521923" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32956153" />
+      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32956153" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.43564355" />
+      <window_info active="true" anchor="bottom" id="Thumbnails" order="17" visible="true" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32972974" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2800789" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24329759" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26449788" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25884017" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49597856" visible="true" weight="0.47524753" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402147" side_tool="true" weight="0.47524753" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.33521923" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32956153" />
+      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32956153" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.43564355" />
+      <window_info active="true" anchor="bottom" id="Thumbnails" order="17" visible="true" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32972974" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.19034852" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/RecommendTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/TestTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <element signature="method#showTest#0;class#TestTableController#0" />
+            <element signature="method#showTestResult#0;class#TestTableController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/PhysiqueTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/RecommendTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/impl/RecommendTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/mapper/RecommendTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_application.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="36" column="113" selection-start-line="36" selection-start-column="113" selection-end-line="36" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/am_process_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1751" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/pojo/ImageTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/am_medicinal_diet.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="412" column="21" lean-forward="true" selection-start-line="412" selection-start-column="21" selection-end-line="412" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#td#9;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#td#9;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="139" column="36" lean-forward="true" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+          <folding>
+            <element signature="e#9354#13285#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/CollectionTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/impl/CollectionTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/mapper/CollectionTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/CollectionTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/UserBrowseTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_efficacy.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4050">
+          <caret line="162" column="45" selection-start-line="162" selection-start-column="45" selection-end-line="162" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/CollectionTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/pojo/MedicinalDietTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_allmedicanal.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/AdminSysTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/ApplicationCateTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/MaterialTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/MedicinalDietTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-932" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lh/mapper/AdminMedTableMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/AdminMedTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#login#0;class#AdminMedTableController#0" />
+            <element signature="method#logout#0;class#AdminMedTableController#0" />
+            <element signature="method#showDiv#0;class#AdminMedTableController#0" />
+            <element signature="method#showMedicinalJsp#0;class#AdminMedTableController#0" />
+            <element signature="method#selectMedicinalDietInfoById#0;class#AdminMedTableController#0" />
+            <element signature="method#editMedicinalDietJsp#0;class#AdminMedTableController#0" />
+            <element signature="method#editMedicinalInfo#0;class#AdminMedTableController#0" />
+            <element signature="method#showPublisherInfo#0;class#AdminMedTableController#0" />
+            <element signature="method#selectMedDietByCondition#0;class#AdminMedTableController#0" />
+            <element signature="method#selectMedDietByPageOrConditon#0;class#AdminMedTableController#0" />
+            <element signature="method#deleteMedicinalInfo#0;class#AdminMedTableController#0" />
+            <element signature="method#selectMedicinalImage#0;class#AdminMedTableController#0" />
+            <element signature="method#uploadImg#0;class#AdminMedTableController#0" />
+            <element signature="method#addImagesInfo#0;class#AdminMedTableController#0" />
+            <element signature="method#deleteImageInfo#0;class#AdminMedTableController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/AdminMedTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/impl/ApplicationCateTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/dto/SearchWordDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/dto/MedicinalDietWithImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/dto/TestWithQuestionDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/mapper/AdminMedTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/mapper/AdminSysTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/mapper/ApplicationCateTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/pojo/AdminSysTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/pojo/ApplicationCateTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/servlet/WebPathInitServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/util/MybatisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/util/PhysiqueAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/service/impl/AdminMedTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding>
+            <element signature="method#selectAdminMedInfoById#0;class#AdminMedTableServiceImpl#0" />
+            <element signature="method#selectMedicinalDietInfoById#0;class#AdminMedTableServiceImpl#0" />
+            <element signature="method#selectCountEffi#0;class#AdminMedTableServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/am_index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/am_login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-817" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lh/controller/MedicinalDietTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1267">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#showMedicinalDietByApplication#0;class#MedicinalDietTableController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main/m_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MedicinalDietSystem:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MedicinalDietSystem</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

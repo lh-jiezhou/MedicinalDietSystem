@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.CommentTableMapper">
+    <insert id="insertComment" parameterType="com.lh.pojo.CommentTable">
+        insert into comment_table(user_id, medicinal_id, comment_date, comment_cont, comment_star)
+        values (#{userId}, #{medicinalId}, #{commentDate}, #{commentCont}, #{commentStar})
+    </insert>
+    <select id="selectCommentByMedId" resultType="com.lh.pojo.CommentTable">
+        select *
+        from comment_table
+        where medicinal_id = #{medId}
+        order by comment_id desc
+    </select>
+</mapper>

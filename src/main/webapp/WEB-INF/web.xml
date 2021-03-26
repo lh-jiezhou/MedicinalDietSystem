@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                            http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <!--指定整个程序上下文信息-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/applicationContext.xml</param-value>
+  </context-param>
+
+  <!--默认首页-->
+  <welcome-file-list>
+    <welcome-file>/jsp/main/m_home.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!--指定字符编码-->
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceRequestEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceResponseEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!--注册一个支持所有http请求类型的过滤器-->
+  <filter>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!--spring启动监听器配置( 优先级：监听器>过滤器>拦截器>Servlet )-->
+  <!--初始化web应用程序上下文-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--注册Dispatcher注册器（前端控制器）-->
+  <servlet>
+    <!--这里的名字是有讲究的，
+        如果我们不去修改spring配置文件默认的位置，那么springmvc
+        它会去WEB-INF 下面找一个叫做xxx-servlet.xml的文件（spring-servlet.xml）
+     -->
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <!--上下文配置的位置的制定-->
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/spring-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!--servlet映射配置-->
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <!--统一写斜杠-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>

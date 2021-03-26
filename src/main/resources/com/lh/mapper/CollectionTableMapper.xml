@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.CollectionTableMapper">
+    <select id="selectCollectionByUserId" resultType="com.lh.pojo.MedicinalDietTable">
+        select distinct t2.*
+        from collection_table t1, medicinal_diet_table t2
+        where t1.medicinal_diet_id = t2.medicinal_diet_id
+        and t1.user_id = #{userId}
+        order by t1.collection_id desc
+    </select>
+
+    <insert id="insertCollection">
+        insert into collection_table(user_id, medicinal_diet_id, collection_date)
+        values (#{userId}, #{medId}, now())
+    </insert>
+
+    <delete id="deleteCollection">
+        delete from collection_table
+        where user_id = #{userId} and medicinal_diet_id = #{medId}
+    </delete>
+</mapper>

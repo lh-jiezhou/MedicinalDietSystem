@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.TestResultTableMapper">
+
+    <resultMap id="resultWithPhysique" type="com.lh.pojo.TestResultTable">
+        <result property="scoreA" column="score_a" />
+        <result property="scoreB" column="score_b" />
+        <result property="scoreC" column="score_c" />
+        <result property="scoreD" column="score_d" />
+        <result property="scoreE" column="score_e" />
+        <result property="scoreF" column="score_f" />
+        <result property="scoreG" column="score_g" />
+        <result property="scoreH" column="score_h" />
+        <result property="scoreI" column="score_i" />
+        <association property="physiqueTable" javaType="com.lh.pojo.PhysiqueTable">
+            <id property="physiqueId" column="physique_id"/>
+            <result property="physiqueName" column="physique_name"/>
+            <result property="physiqueCharacteristic" column="physique_characteristic"/>
+            <result property="physiquePrinciple" column="physique_principle"/>
+            <result property="physiqueDietRecommend" column="physique_diet_recommend"/>
+            <result property="phyKeyA" column="phy_key_a"/>
+            <result property="phyKeyB" column="phy_key_b"/>
+            <result property="phyKeyC" column="phy_key_c"/>
+            <result property="phyKeyD" column="phy_key_d"/>
+        </association>
+    </resultMap>
+
+    <insert id="insertTestResult">
+        insert into test_result_table(test_id, user_id, physique_id, score_a, score_b, score_c, score_d, score_e, score_f, score_g, score_h, score_i)
+        values (#{testId}, #{userId}, #{physiqueId}, #{scoreA}, #{scoreB}, #{scoreC}, #{scoreD}, #{scoreE}, #{scoreF}, #{scoreG}, #{scoreH}, #{scoreI})
+    </insert>
+
+    <select id="selectTestResultByUserId" resultMap="resultWithPhysique">
+        select t1.score_a, t1.score_b, t1.score_c, t1.score_d, t1.score_e, t1.score_f, t1.score_g, t1.score_h, t1.score_i,
+               t2.*
+        from test_result_table t1, physique_table t2
+        where t1.physique_id = t2.physique_id
+          and t1.user_id = #{userId}
+        ORDER BY t1.test_result_id DESC
+        LIMIT 0,1
+    </select>
+
+</mapper>

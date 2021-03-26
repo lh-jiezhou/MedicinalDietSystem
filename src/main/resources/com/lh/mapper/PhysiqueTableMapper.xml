@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.PhysiqueTableMapper">
+    <select id="selectPhysiqueKeyA" resultType="string">
+        select phy_key_a
+        from physique_table
+        where physique_id = #{physiqueId}
+    </select>
+    <select id="selectPhysiqueKeyB" resultType="string">
+        select phy_key_b
+        from physique_table
+        where physique_id = #{physiqueId}
+    </select>
+    <select id="selectPhysiqueKeyC" resultType="string">
+        select phy_key_c
+        from physique_table
+        where physique_id = #{physiqueId}
+    </select>
+    <select id="selectPhysiqueKeyD" resultType="string">
+        select phy_key_d
+        from physique_table
+        where physique_id = #{physiqueId}
+    </select>
+
+</mapper>

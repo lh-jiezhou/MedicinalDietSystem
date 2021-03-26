@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.EfficacyCateTableMapper">
+    <select id="selectAllEfficacyCateTable" resultType="com.lh.pojo.EfficacyCateTable">
+        select * from efficacy_cate_table
+        where efficacy_id = 32
+           or efficacy_id = 33
+           or efficacy_id = 34
+           or efficacy_id = 35
+           or efficacy_id = 36
+
+    </select>
+    <select id="selectNameById" resultType="string">
+        select efficacy_name
+        from efficacy_cate_table
+        where efficacy_id = #{efficacyId}
+    </select>
+    <select id="selectEfficacyByMedId" resultType="com.lh.pojo.EfficacyCateTable">
+        select t1.*
+        from efficacy_cate_table t1, efficacy_conn_table t2
+        where t1.efficacy_id = t2.efficacy_id
+              and t2.goods_category = 1
+              and t2.goods_id = #{medId}
+    </select>
+    <select id="selectEfficacyCateById" resultType="com.lh.pojo.EfficacyCateTable">
+        select *
+        from efficacy_cate_table
+        where efficacy_id = #{efficacyId}
+    </select>
+</mapper>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+                           http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--spring-mybatis.xml:整合ORM,整合事务功能-->
+
+    <!--扫描mapper包-->
+    <context:component-scan base-package="com.lh.mapper">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
+    <!--引入数据库相关信息的配置文件-->
+    <context:property-placeholder location="classpath:db.properties" />
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="driverClass" value="${jdbc.driver}" />
+        <property name="user" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+        <!--如果有需要，把所有的属性全部写到properties文件当中去-->
+        <!--c3p0连接池的私有属性-->
+        <property name="maxPoolSize" value="30" />
+        <property name="minPoolSize" value="10" />
+        <!--关闭连接后不自动commit-->
+        <property name="autoCommitOnClose" value="false" />
+        <!--获取连接超时时间-->
+        <property name="checkoutTimeout" value="100000" />
+        <!--当获取连接失败重试次数-->
+        <property name="acquireRetryAttempts" value="3" />
+    </bean>
+
+    <!--最后关键一步，如何整合mybatis-->
+    <!--
+        1、注入一般mybatis的sqlSessionFactory这就是我们所需要做的关键步骤
+        2、声明式的事务管理
+    -->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!--引入mappers 文件-->
+        <!--<property name="configLocation" value="classpath:mybatis-config.xml" />-->
+        <!--下面配置就要求所有的mapper文件必须在com/lh/mapper/之下(resources)-->
+        <property name="mapperLocations" value="classpath:com/lh/mapper/**/*.xml" />
+        <property name="configuration">
+            <bean class="org.apache.ibatis.session.Configuration">
+                <!--可以加入驼峰命名（下划线转为驼峰命名），数据库中user_name  ==> userName -->
+                <!--相当于mybatis中setting中的配置，
+                    其他mybatis的配置也就是mybatis.cfg.xml的相关配置都会转移到这
+                    所有不再需要mybatis.cfg.xml文件-->
+                <property name="mapUnderscoreToCamelCase" value="true" />
+            </bean>
+        </property>
+        <!--插件配置-->
+        <property name="plugins">
+            <array>
+                <!--分页插件的配置 拦截器实现分页功能-->
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <!--这里的几个配置主要演示如何使用，如果不理解，一定要去掉下面配置-->
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <!--持久层接口-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--约定basePackage，扫描mapper包-->
+        <property name="basePackage" value="com.lh.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean" />
+    </bean>
+    
+    <!--事务管理，使用数据源事务管理类进行管理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--注入数据源-->
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!--确定事务管理的策略 transaction-manager:指向上面的transactionManager-->
+    <tx:advice transaction-manager="transactionManager" id="transactionAdvice">
+        <!--事务处理的相关值以及它的传播性 （建议们）-->
+        <tx:attributes>
+            <!--查询相关配置为只读 select开头或者get,query-->
+            <tx:method name="select*" read-only="true"/>
+            <tx:method name="get*" read-only="true" />
+            <tx:method name="query*" read-only="true" />
+            <!--rollback-for：开启事务回滚，有异常就回滚-->
+            <tx:method name="delete*" propagation="REQUIRED"
+                       rollback-for="Exception" />
+            <tx:method name="update*" propagation="REQUIRED"
+                       rollback-for="Exception" />
+            <tx:method name="insert*" propagation="REQUIRED"
+                       rollback-for="Exception" />
+            <tx:method name="add*" propagation="REQUIRED"
+                       rollback-for="Exception" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!--使用AOP对事务管理的范围进行植入，注意：
+        1、对哪些地方需要进行事务的管理，execution书写，明确边界
+        2、使用什么策略去管理
+        策略我们使用了tx:advice全部书写于其中，在我们的aop的advisor当中只需要去引用这个事务管理者的建议即可
+    -->
+    <aop:config>
+        <aop:pointcut id="txCut" expression="execution(* com.lh.service..*.*(..))" />
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="txCut" />
+    </aop:config>
+
+    <!--采用注解进行事务配置，请在Service的实现类上面加上@Transactional注解-->
+    <!--二者选其一-->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+</beans>

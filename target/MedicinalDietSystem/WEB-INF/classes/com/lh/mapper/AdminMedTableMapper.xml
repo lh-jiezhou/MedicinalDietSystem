@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.AdminMedTableMapper">
+    <select id="selectAdminMedInfoById" resultType="com.lh.pojo.AdminMedTable">
+        select *
+        from admin_med_table
+        where admin_med_no = #{adminMedId}
+    </select>
+    <select id="selectMedicinalDietInfoById" resultType="com.lh.pojo.MedicinalDietTable">
+        select *
+        from medicinal_diet_table
+        where medicinal_diet_id = #{id}
+    </select>
+    <select id="selectCountEffi" resultType="java.util.HashMap">
+        select med_effi_cate,count(*) as cnt
+        from medicinal_diet_table
+        group by med_effi_cate
+    </select>
+    <select id="selectCountShape" resultType="java.util.HashMap">
+        select med_shape_cate,count(*) as cnt
+        from medicinal_diet_table
+        group by med_shape_cate
+    </select>
+    <insert id="insertMedicinalDietInfo" parameterType="com.lh.pojo.MedicinalDietTable" >
+        insert into medicinal_diet_table(med_diet_name,med_diet_origin,med_diet_constitute,med_diet_preparation,med_diet_efficacy,med_effi_cate,med_diet_application,
+        med_diet_explain,med_shape_cate,med_make_cate,med_diet_precautions)
+        values (#{medDietName}, #{medDietOrigin}, #{medDietConstitute}, #{medDietPreparation}, #{medDietEfficacy},
+        #{medEffiCate}, #{medDietApplication}, #{medDietExplain},#{medShapeCate},#{medMakeCate},#{medDietPrecautions})
+    </insert>
+    <update id="updateMedicinalDietInfo" parameterType="com.lh.pojo.MedicinalDietTable">
+        update medicinal_diet_table
+        set med_diet_name=#{medDietName},med_diet_origin=#{medDietOrigin},med_diet_constitute=#{medDietConstitute},med_diet_preparation=#{medDietPreparation},
+            med_diet_efficacy=#{medDietEfficacy},med_effi_cate=#{medEffiCate},med_diet_application=#{medDietApplication},med_diet_explain=#{medDietExplain},med_shape_cate=#{medShapeCate},med_make_cate=#{medMakeCate},med_diet_precautions=#{medDietPrecautions},medicinal_pub_id=#{medicinalPubId}
+        where medicinal_diet_id = #{medicinalDietId}
+    </update>
+    <select id="selectMedicinalTableInfo" resultType="com.lh.pojo.MedicinalDietTable">
+        <bind name="_words" value="'%'+condition+'%'" />
+        select *
+        from medicinal_diet_table
+        <where>
+         med_diet_name like #{_words}
+         or med_diet_efficacy like #{_words}
+         or med_diet_application like #{_words}
+        </where>
+    </select>
+    <select id="selectMedicinalTablePageInfo" resultType="com.lh.pojo.MedicinalDietTable">
+        <bind name="_words" value="'%'+condition+'%'" />
+        select *
+        from medicinal_diet_table
+        <where>
+            med_diet_name like #{_words}
+            or med_diet_efficacy like #{_words}
+            or med_diet_application like #{_words}
+        </where>
+        limit #{pageF},#{pageB}
+    </select>
+    <delete id="deleteMedicinalTableInfo">
+        delete
+        from medicinal_diet_table
+        where medicinal_diet_id = #{id}
+    </delete>
+    <select id="selectMedicinalImage" resultType="com.lh.pojo.ImageTable">
+        select *
+        from image_table
+        where goods_id = #{id}
+        order by image_sequence asc
+    </select>
+    <select id="selectImageMaxSequence" resultType="int">
+        select max(image_sequence)
+        from image_table
+        where goods_id = #{id}
+    </select>
+    <insert id="insertImageInfo" parameterType="com.lh.pojo.ImageTable">
+        insert into image_table(goods_id,goods_category,image_address,image_sequence,image_explain)
+        values (#{goodsId},#{goodsCategory},#{imageAddress},#{imageSequence},#{imageExplain})
+    </insert>
+    <delete id="deleteImageInfo" parameterType="int">
+      delete from image_table
+      where goods_id = #{id}
+    </delete>
+</mapper>

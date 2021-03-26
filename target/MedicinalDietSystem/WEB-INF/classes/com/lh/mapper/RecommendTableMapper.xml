@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.RecommendTableMapper">
+    <insert id="insertRecommend">
+        insert into recommend_table(user_id, medicinal_diet_id, recommend_base)
+        values (#{userId}, #{medId}, #{recommendBase})
+    </insert>
+    <select id="selectRecommendMedId" resultType="integer">
+        select distinct medicinal_diet_id
+        from recommend_table
+        where user_id = #{userId}
+          and recommend_base = #{recommendBase}
+        order by recommend_id desc
+    </select>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.UserTableMapper">
+    <select id="selectUserWithLogin" resultType="com.lh.pojo.UserTable">
+        select *
+        from user_table
+        where user_no = #{userNo}
+          and user_password = #{userPassword}
+    </select>
+    <insert id="insertUserTableBase" parameterType="com.lh.dto.UserWithLoginDTO" >
+        insert into user_table(user_no, user_password)
+        values (#{userNo}, #{userPassword})
+    </insert>
+    <update id="updateUserTableByUser" parameterType="com.lh.pojo.UserTable">
+        update user_table
+        set user_nickname = #{userNickname}, user_job = #{userJob}, user_sex = #{userSex},
+            user_age = #{userAge}, user_aim = #{userAim}, user_sign = #{userSign}
+        where user_no = #{userNo}
+    </update>
+    <select id="selectUser" resultType="com.lh.pojo.UserTable">
+        select *
+        from user_table
+        where user_id = #{userId}
+    </select>
+</mapper>

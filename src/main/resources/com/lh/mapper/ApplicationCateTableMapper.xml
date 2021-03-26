@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.ApplicationCateTableMapper">
+    <select id="selectAllApplicationCateTable" resultType="com.lh.pojo.ApplicationCateTable">
+        select * from application_cate_table
+    </select>
+    <select id="selectNameById" resultType="string">
+        select application_name
+        from application_cate_table
+        where application_id = #{applicationId}
+#             and application_id != 9
+#             and application_id != 10
+#           and application_id != 12
+#           and application_id != 15
+#           and application_id != 16
+#           and application_id != 30
+#           and application_id != 34
+    </select>
+</mapper>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lh.mapper.MedicinalDietTableMapper">
+
+    <!--
+        mybatis对于处理简单的单表查询一般使用resultType就可以解决
+        对于多表联合查询往往都需要使用resultMap进行详细描述
+        告诉mybatis怎么封装（规矩自己定）
+    -->
+    <!--定义基础Map-->
+    <resultMap id="medBaseMap" type="com.lh.pojo.MedicinalDietTable">
+        <id property="medicinalDietId" column="medicinal_diet_id"/>
+        <result property="medDietName" column="med_diet_name" />
+        <result property="medDietOrigin" column="med_diet_origin" />
+        <result property="medDietConstitute" column="med_diet_constitute" />
+        <result property="medDietPreparation" column="med_diet_preparation" />
+        <result property="medDietEfficacy" column="med_diet_efficacy" />
+        <result property="medDietApplication" column="med_diet_application" />
+        <result property="medDietExplain" column="med_diet_explain" />
+        <result property="medDietPrecautions" column="med_diet_precautions" />
+        <result property="medicinalPubId" column="medicinal_pub_id" />
+        <!--<association property="adminMedTable" javaType="com.lh.pojo.AdminMedTable">-->
+        <!--<id property="adminMedId" column="admin_med_id" />-->
+        <!--<result property="adminMedName" column="admin_med_name" />-->
+        <!--<result property="adminMedImage" column="admin_med_image" />-->
+        <!--</association>-->
+        <result property="medDietVideo" column="med_diet_video" />
+        <result property="medEffiCate" column="med_effi_cate" />
+        <result property="medShapeCate" column="med_shape_cate" />
+        <result property="medMakeCate" column="med_make_cate" />
+        <result property="medDietImg" column="med_diet_img" />
+        <result property="medDietClick" column="med_diet_click" />
+        <result property="medVideoImg" column="med_video_img" />
+
+    </resultMap>
+
+
+    <resultMap id="medicinalDietWithImage" extends="medBaseMap" type="com.lh.dto.MedicinalDietWithImage">
+        <!--ofType-->
+        <!--封装图片-->
+        <collection property="imageTables" ofType="com.lh.pojo.ImageTable">
+            <result property="imageAddress" column="image_address" />
+            <result property="imageSequence" column="image_sequence" />
+            <result property="imageExplain" column="image_explain" />
+        </collection>
+        <!--<collection property="commentTables" ofType="com.lh.pojo.CommentTable">-->
+        <!--<id property="commentId" column="comment_id" />-->
+        <!--<result property="userId" column="user_id" />-->
+        <!--封装评论用户信息-->
+        <!--<association property="userTable" javaType="com.lh.pojo.UserTable">-->
+        <!--<result property="userNickname" column="user_nickname" />-->
+        <!--<result property="userImage" column="user_image" />-->
+        <!--</association>-->
+        <!--<result property="medicinalId" column="medicinal_id" />-->
+        <!--<result property="commentDate" column="comment_date" />-->
+        <!--<result property="commentCont" column="comment_cont" />-->
+        <!--<result property="commentImage" column="comment_image" />-->
+        <!--<result property="commentStar" column="comment_star" />-->
+        <!--</collection>-->
+    </resultMap>
+
+
+    <!--模糊查询 通过搜索内容查找 （药膳名name|药膳组成constitute|应用efficacy|功效application|方解explain）-->
+    <select id="selectMedicinalDietTableByWords" resultType="com.lh.pojo.MedicinalDietTable">
+        <bind name="_words" value="'%'+words+'%'" />
+        select *
+        from medicinal_diet_table
+        <where>
+            med_diet_name like  #{_words}
+            or med_diet_constitute like  #{_words}
+            or med_diet_efficacy like  #{_words}
+            or med_diet_application like  #{_words}
+            or med_diet_explain like  #{_words}
+            or med_effi_cate like  #{_words}
+            or med_shape_cate like  #{_words}
+            or med_make_cate like  #{_words}
+        </where>
+    </select>
+
+    <!--通过功效分类查找药膳 goods_category=1-->
+    <select id="selectMedicinalDietTableByEfficacyId" resultType="com.lh.pojo.MedicinalDietTable">
+        select t2.*
+        from efficacy_conn_table t1, medicinal_diet_table t2
+        <where>
+            AND t1.goods_id = t2.medicinal_diet_id
+            AND t1.goods_category = 1
+            AND t1.efficacy_id = #{efficacyId}
+        </where>
+    </select>
+    <!--通过应用分类查找药膳 goods_category=1 -->
+    <select id="selectMedicinalDietTableByApplicationId" resultType="com.lh.pojo.MedicinalDietTable">
+        select t2.*
+        from application_conn_table t1, medicinal_diet_table t2
+        <where>
+            AND t1.goods_id = t2.medicinal_diet_id
+            AND t1.goods_category = 1
+            AND t1.application_id = #{applicationId}
+        </where>
+    </select>
+
+    <!--（主页）通过专业分类查找，med_effi_cate-->
+    <select id="selectMedicinalDietTableByEffiCate" resultType="com.lh.pojo.MedicinalDietTable">
+        select  *
+        from medicinal_diet_table
+        where med_effi_cate = #{effiCate}
+    </select>
+    <!--（主页）通过形态分类查找，med_shape_cate-->
+    <select id="selectMedicinalDietTableByShapeCate" resultType="com.lh.pojo.MedicinalDietTable">
+        select  *
+        from medicinal_diet_table
+        where med_shape_cate = #{shapeCate}
+    </select>
+    <!--（主页）通过制作分类查找，med_make_cate-->
+    <select id="selectMedicinalDietTableByMakeCate" resultType="com.lh.pojo.MedicinalDietTable">
+        select  *
+        from medicinal_diet_table
+        where med_make_cate = #{makeCate}
+    </select>
+
+    <!--查看药膳详情界面-->
+    <select id="selectDetailOfMedicinalDiet" resultMap="medicinalDietWithImage">
+        select t1.*, t2.image_address, t2.image_sequence, t2.image_explain
+        from medicinal_diet_table t1, image_table t2
+        where t2.goods_category = 1
+          AND t2.goods_id = t1.medicinal_diet_id
+          AND t1.medicinal_diet_id = #{medId}
+        order by t2.image_sequence
+    </select>
+
+    <select id="selectMedicinalDietTableByClick" resultType="com.lh.pojo.MedicinalDietTable">
+        SELECT *
+        FROM medicinal_diet_table
+        ORDER BY med_diet_click DESC
+        LIMIT 0,#{num}
+    </select>
+
+    <select id="selectMedIdByRecommendKey" resultType="integer">
+        <bind name="_key" value="'%'+key+'%'" />
+        select medicinal_diet_id
+        from medicinal_diet_table
+        <where>
+            med_diet_constitute like  #{_key}
+            or med_diet_efficacy like  #{_key}
+            or med_diet_application like  #{_key}
+            or med_diet_explain like  #{_key}
+        </where>
+        ORDER BY med_diet_click DESC
+        LIMIT 0,#{num}
+    </select>
+    <select id="selectMedById" resultType="com.lh.pojo.MedicinalDietTable">
+        select *
+        from medicinal_diet_table
+        where medicinal_diet_id = #{medId}
+    </select>
+    <update id="updateMedClick">
+        update medicinal_diet_table
+        set med_diet_click = med_diet_click+1
+        where medicinal_diet_id = #{medId}
+    </update>
+
+    <!--通过疾病分类查找药膳 goods_category=1 -->
+    <select id="selectMedicinalDietTableByDiseaseId" resultType="com.lh.pojo.MedicinalDietTable">
+        select t2.*
+        from disease_conn_table t1, medicinal_diet_table t2
+        <where>
+            AND t1.goods_id = t2.medicinal_diet_id
+            AND t1.goods_category = 1
+            AND t1.disease_id = #{diseaseId}
+        </where>
+    </select>
+
+</mapper>
